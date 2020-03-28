@@ -24,32 +24,32 @@ Client.on('message', msg => {
 
   if (msg.content.startsWith(prefix + 'role')) {
 
-    // Get args
+    // Tomar args
     let args = msg.content.split(" ");
 
     if (args.length < 2 || args[1] == '--help') {
-      msg.channel.sendMessage('These are the roles you\'re allowed to join: \n'+
+      msg.channel.sendMessage('Estos son los roles disponibles: \n'+
         allowedString +
-        '\nuse "!role `<role_name>` to join a role')
+        '\nusa !role `<rol>` para unirte.')
 
       return
     }
 
-    // Get the role
+    // Asignar Rol
     let role = msg.guild.roles.find("name", args[1].toLowerCase());
 
     if (!role || role === null) {
-      msg.channel.sendMessage('Could not find a role by that name.')
+      msg.channel.sendMessage('No se pudo encontrar el rol, intenta de nuevo.')
       return
     }
 
     if (allowedRoles.indexOf(role.name) === -1) {
-      msg.channel.sendMessage('Doesn\'t look like you\'re allowed to join that group. \nFor a list of allowed roles type `!role --help`')
+      msg.channel.sendMessage('No tienes permitido unirte a este grupo. \nPara obtener una lista de roles usa: `!role --help`')
       return
     }
 
     msg.member.addRole(role).catch(console.error);
-    msg.channel.sendMessage('You\'ve been added to: ' + role.name)
+    msg.channel.sendMessage('Has sido agregado a: ' + role.name)
 
     return
   }
@@ -62,7 +62,7 @@ Client.on("guildMemberAdd", member => {
 })
 
 Client.on('ready', () => {
-  Client.user.setGame('type !role --help')
+  Client.user.setGame('Usa !role --help')
   console.log(`Ready to set roles in ${Client.channels.size} channels on ${Client.guilds.size} servers, for a total of ${Client.users.size} users.`)
 })
 
