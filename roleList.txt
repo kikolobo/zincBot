@@ -1,0 +1,11 @@
+Los roles disponibles son:
+
+	:radio_button: **3dteam**          < Tines acceso a una impresora 3D
+	:radio_button: **designteam**      < Eres diseñador industrial
+	:radio_button: **engineeringteam** < Eres ingeniero (mecanico, electronico, etc)
+	:radio_button: **roboticsteam**    < Eres ingeniero con especialidad en automatización
+	:radio_button: **comsteam**        < Equipo de P.R y Comunicación
+	:radio_button: **procurringteam**  < Puedes ayudar con procura y materiales
+	:radio_button: **devteam**         < Eres programador o developer
+
+:point_right: Escribe en el campo de texto: `zinc soy <nombre de rol>` para asignarlo.
