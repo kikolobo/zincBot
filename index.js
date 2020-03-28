@@ -28,9 +28,9 @@ Client.on('message', msg => {
     let args = msg.content.split(" ");
 
     if (args.length < 2 || args[1] == '--help') {
-      msg.channel.sendMessage('These are the roles you\'re allowed to join: \n'+
+      msg.channel.sendMessage('Estos son los roles a los que te puedes unir: \n'+
         allowedString +
-        '\nuse "!role `<role_name>` to join a role')
+        '\nusa "!role `<nombre del rol>` para unirte.')
 
       return
     }
@@ -39,7 +39,7 @@ Client.on('message', msg => {
     let role = msg.guild.roles.find("name", args[1].toLowerCase());
 
     if (!role || role === null) {
-      msg.channel.sendMessage('Could not find a role by that name.')
+      msg.channel.sendMessage('No se pudo encontrar el rol.')
       return
     }
 
@@ -58,7 +58,7 @@ Client.on('message', msg => {
 Client.on("guildMemberAdd", member => {
     console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
 
-    //member.guild.defaultChannel.sendMessage(`Welcome "${member.user.username}"! Be sure to set your platform by typing "!role"`);
+    member.guild.defaultChannel.sendMessage(`Bienvenido "${member.user.username}"! \n Asignate un rol con "!role" seguido del rol.`);
 })
 
 Client.on('ready', () => {
