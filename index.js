@@ -58,7 +58,7 @@ Client.on('message', msg => {
 Client.on("guildMemberAdd", member => {
     console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
 
-    member.guild.defaultChannel.sendMessage(`Bienvenido "${member.user.username}"! \n Asegúrate de escoger tu rolc con "!role" y el nombre del rol`);
+    member.guild.defaultChannel.sendMessage(`Bienvenido "${member.user.username}"! \n Asegúrate de escoger tu rolc con "!role" y el nombre del rol \n\nReglas: \n0.- Por favor NO SPAM - NO FLOODS \n1.- Busca el canal más adecuado para postear. \n2.- No postear avances de otros proyectos mas que en el canal de #noticias-de-otros-proyectos \n3.- Si tienes una idea para un proyecto la discutimos en #posibles-proyectos \n4.- Para todo lo demás… Esta #todo-lo-demas :)` );
 })
 
 Client.on('ready', () => {
