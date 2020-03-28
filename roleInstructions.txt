@@ -1,0 +1,23 @@
+
+**¡Hola!**, Soy **zinc** :robot:, el bot de **CoVida!**
+
+**¿Te puedo ayudar a asignarte un rol? 
+.. :warning:ES IMPROTANTE**:warning:
+ El rol sirve para buscarte en caso de requerir tu ayuda. 
+ *Por ejemplo: si se necesita imprimir masivo o si se requiere una consulta de tu área.*
+
+ Los roles por el momento son:
+   :radio_button: **3dteam**          < Impresores 3d
+   :radio_button: **designteam**      < Diseño industrial, mecanico, etc
+   :radio_button: **roboticsteam**    < Automatización y electronica
+   :radio_button: **comsteam**        < Equipo de P.R y Comunicación
+   :radio_button: **procurringteam**  < Equipo de procura, compras y materiales.
+   :radio_button: **devteam**         < Equipo de sistemas y programación
+
+ Para asignarlo escribe en el campo de texto aqui abajo:
+ **zinc soy <tu_rol>**
+    *por ejemplo:-*
+ 			**zinc soy medteam**       
+  			**zinc soy 3dteam**
+  
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
