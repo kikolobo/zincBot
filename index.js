@@ -22,15 +22,15 @@ Client.on('message', msg => {
     || msg.author.bot
   ) return
 
-  if (msg.content.startsWith(prefix + 'rol')) {
+  if (msg.content.startsWith(prefix + 'role')) {
 
     // Get args
     let args = msg.content.split(" ");
 
     if (args.length < 2 || args[1] == '--help') {
-      msg.channel.sendMessage('Estos son los roles a los que te puedes unir: \n'+
+      msg.channel.sendMessage('These are the roles you\'re allowed to join: \n'+
         allowedString +
-        '\nusa "!rol" + `<nombre del rol>` para unirte.')
+        '\nuse "!role `<role_name>` to join a role')
 
       return
     }
@@ -38,8 +38,8 @@ Client.on('message', msg => {
     // Get the role
     let role = msg.guild.roles.find("name", args[1].toLowerCase());
 
-    if (!rol || rol === null) {
-      msg.channel.sendMessage('No se pudo encontrar el rol.')
+    if (!role || role === null) {
+      msg.channel.sendMessage('Could not find a role by that name.')
       return
     }
 
@@ -48,8 +48,8 @@ Client.on('message', msg => {
       return
     }
 
-    msg.member.addRole(rol).catch(console.error);
-    msg.channel.sendMessage('Has sido asignado a: ' + role.name)
+    msg.member.addRole(role).catch(console.error);
+    msg.channel.sendMessage('You\'ve been added to: ' + role.name)
 
     return
   }
@@ -58,11 +58,11 @@ Client.on('message', msg => {
 Client.on("guildMemberAdd", member => {
     console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
 
-    member.guild.defaultChannel.sendMessage(`Bienvenido "${member.user.username}"! \n Asignate un rol con "!role" seguido del rol.`);
+    member.guild.defaultChannel.sendMessage(`Bienvenido "${member.user.username}"! \n Asegúrate de escoger tu rolc con "!role" y el nombre del rol`);
 })
 
 Client.on('ready', () => {
-  Client.user.setGame('type !rol --help')
+  Client.user.setGame('type !role --help')
   console.log(`Ready to set roles in ${Client.channels.size} channels on ${Client.guilds.size} servers, for a total of ${Client.users.size} users.`)
 })
 
