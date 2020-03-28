@@ -22,7 +22,7 @@ Client.on('message', msg => {
     || msg.author.bot
   ) return
 
-  if (msg.content.startsWith(prefix + 'role')) {
+  if (msg.content.startsWith(prefix + 'rol')) {
 
     // Get args
     let args = msg.content.split(" ");
@@ -30,7 +30,7 @@ Client.on('message', msg => {
     if (args.length < 2 || args[1] == '--help') {
       msg.channel.sendMessage('Estos son los roles a los que te puedes unir: \n'+
         allowedString +
-        '\nusa "!role `<nombre del rol>` para unirte.')
+        '\nusa "!rol" + `<nombre del rol>` para unirte.')
 
       return
     }
@@ -38,7 +38,7 @@ Client.on('message', msg => {
     // Get the role
     let role = msg.guild.roles.find("name", args[1].toLowerCase());
 
-    if (!role || role === null) {
+    if (!rol || rol === null) {
       msg.channel.sendMessage('No se pudo encontrar el rol.')
       return
     }
@@ -48,8 +48,8 @@ Client.on('message', msg => {
       return
     }
 
-    msg.member.addRole(role).catch(console.error);
-    msg.channel.sendMessage('You\'ve been added to: ' + role.name)
+    msg.member.addRole(rol).catch(console.error);
+    msg.channel.sendMessage('Has sido asignado a: ' + role.name)
 
     return
   }
@@ -62,7 +62,7 @@ Client.on("guildMemberAdd", member => {
 })
 
 Client.on('ready', () => {
-  Client.user.setGame('type !role --help')
+  Client.user.setGame('type !rol --help')
   console.log(`Ready to set roles in ${Client.channels.size} channels on ${Client.guilds.size} servers, for a total of ${Client.users.size} users.`)
 })
 
