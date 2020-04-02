@@ -9,9 +9,10 @@
  Los roles por el momento son:
    :radio_button: **3dteam**          < Impresores 3d
    :radio_button: **designteam**      < Diseño industrial, mecanico, etc
+   :radio_button: **medteam**         < Eres médico, ing. biomedico o personal de salud
    :radio_button: **roboticsteam**    < Automatización y electronica
    :radio_button: **comsteam**        < Equipo de P.R y Comunicación
-   :radio_button: **procurringteam**  < Equipo de procura, compras y materiales.
+   :radio_button: **procuringteam**  < Equipo de procura, compras y materiales.
    :radio_button: **devteam**         < Equipo de sistemas y programación
 
  Para asignarlo escribe en el campo de texto aqui abajo:
